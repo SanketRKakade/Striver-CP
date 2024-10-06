@@ -1,0 +1,1 @@
+{"name":"Local: erasingZeroes","url":"/Users/sanketkakade/Documents/Codes/Striver-CP/Constructive/erasingZeroes.cpp","tests":[{"id":1724063870435,"input":"3\n010011\n0\n1111000\n","output":"2\n0\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sanketkakade/Documents/Codes/Striver-CP/Constructive/erasingZeroes.cpp","group":"local","local":true}

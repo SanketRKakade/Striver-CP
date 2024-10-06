@@ -1,0 +1,1 @@
+{"name":"Local: C+=","url":"/Users/sanketkakade/Documents/Codes/Striver-CP/Constructive/C+=.cpp","tests":[{"id":1723816665181,"input":"2\n1 2 3\n5 4 100\n","output":"2\n7\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sanketkakade/Documents/Codes/Striver-CP/Constructive/C+=.cpp","group":"local","local":true}
