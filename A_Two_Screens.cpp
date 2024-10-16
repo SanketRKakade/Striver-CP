@@ -24,12 +24,30 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        ll a,b,c,n;
-        cin>>a>>b>>c>>n;
-        ll maxi = max(a,max(b,c));
-        ll want = (maxi-a) + (maxi-b) + (maxi-c);
-        if(n>=want && (n-want)%3==0) cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
+        string s;
+        cin>>s;
+        string t;
+        cin>>t;
+        int n = s.size();
+        int m = t.size();
+        int i=0;
+        int count=0;
+        while(true){
+            if(s[i]!=t[i]) break;
+            else{
+                count++;
+                i++;
+            }
+        }
+        if(s==t){
+            cout<<s.length()+1<<endl;
+        }
+        else if(count==0){
+            cout<<m+n<<endl;
+        }
+        else{
+            cout<<m+n-count+1<<endl;
+        }
         
     }
     return 0;
