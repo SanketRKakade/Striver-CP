@@ -24,11 +24,21 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        ll a, b;
-        cin >> a >> b;
-        ll diff = abs(a - b);
-        ll count = diff / 10 + (diff % 10 != 0 ? 1 : 0);
-        cout << count << endl;
+        int a,b,d,e;
+        cin>>a>>b>>d>>e;
+        int first = a+b;
+        int sec = d-b;
+        int third = e-d;
+
+        if (first == sec && sec == third) {
+            cout<<3<<endl; 
+        } 
+        else if (first == sec || sec == third || first == third) {
+            cout<<2<<endl;
+        } 
+        else {
+            cout<<1<<endl;
+        }
     }
     return 0;
 }
