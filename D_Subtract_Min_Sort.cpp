@@ -17,6 +17,18 @@ typedef vector<ll> vi;
 #define debug(...) 42
 #endif
 
+void solve(vector<int>v,int n){
+    loop(i,1,n){
+        if(v[i-1]>v[i]) {
+            cout<<"NO"<<endl;
+            return;
+        }
+        v[i]-=v[i-1];
+        v[i-1]=0;
+    }
+    cout<<( is_sorted(all(v)) ? "YES\n" : "NO\n");
+}
+
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -24,34 +36,16 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int n,k;
-        cin>>n>>k;
+        int n;
+        cin>>n;
         vector<int>v(n);
         loop(i,0,n){
             cin>>v[i];
         }
-        sort(v.begin(),v.end());
-        // loop( i,0,n){
-        //     cout<<v[i];
-        // }
-        int i = 0;
-        int j = n-1;
-        int count=0;
-        while(i<j){
-            if(v[i]+v[j]==k){
-                count++;
-                i++;
-                j--;
-            }
-            else if(v[i]+v[j]<k){
-                i++;
-            }
-            else{
-                j--;
-            }
+        if(is_sorted(all(v))) cout<<"YES"<<endl;
+        else{
+            solve(v,n);
         }
-        cout<<count;
-        cout<<endl;
     }
     return 0;
 }
